@@ -18,6 +18,10 @@ describe("Test that sum of primes works", function() {
     assert(lib.sumOfPrimes(3) == 5);
 
   }
+  it("should give 2 for the input 2", function(){
+    assert(lib.sumOfPrimes(2) == 2);
 
+  }
+  
 }
 
