@@ -22,6 +22,29 @@ describe("Test that sum of primes works", function() {
     assert(lib.sumOfPrimes(2) == 2);
 
   }
-  
+  it("should give 5 for the input 4", function(){
+    assert(lib.sumOfPrimes(4) == 5);
+
+  }
+  it("should give 17 for the input 7", function(){
+    assert(lib.sumOfPrimes(7) == 17);
+
+  }
+  it("should give 10 for the input 5", function(){
+    assert(lib.sumOfPrimes(-5) == false);
+
+  }
+  it("should give 41 for the input 13", function(){
+    assert(lib.sumOfPrimes('') == false);
+
+  }
+  it("should give 0 for the input 0", function(){
+    assert(lib.sumOfPrimes(0) == false);
+
+  }
+  it("should give 0 for the input 1", function(){
+    assert(lib.sumOfPrimes(1) == false);
+
+  }
 }
 
