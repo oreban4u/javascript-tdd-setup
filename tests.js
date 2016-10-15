@@ -3,22 +3,48 @@
 var chai = require('chai');
 var assert = chai.assert;
 
-var lib = require('./lib/library.js');
+var lib = require('./lib/sum_of_primes.js');
 
-describe("Test that constants are computed properly", function() {
-  it("should give 10, 4 for constants 2, 5 as a and n respectively", function() {
-    assert(
-      lib.compareCoefficients(lib.quadraticDerivative(2, 5), { a: 10, n: 4 })
-    );
+describe("Test that sum of primes works", function() {
+  it("should return 17 for the input 8", function() {
+    assert(lib.sumOfPrimes(8) == 17);
   });
-  it("should give 2, 1 for constants 1, 2 as a and n respectively", function() {
-    assert(
-      lib.compareCoefficients(lib.quadraticDerivative(1, 2), { a: 2, n: 1 })
-    );
+
+  it("should return 28 for the input 11", function(){
+    assert(lib.sumOfPrimes(11) == 28);
+
   });
-  it("should give 8, 1 for constants 4, 2 as a and n respectively", function() {
-    assert(
-      lib.compareCoefficients(lib.quadraticDerivative(4, 2), { a: 8, n: 1 })
-    );
+  it("should return 5 for the input 3", function(){
+    assert(lib.sumOfPrimes(3) == 5);
+
+  });
+  it("should return 2 for the input 2", function(){
+    assert(lib.sumOfPrimes(2) == 2);
+
+  });
+  it("should return 'Invalid input' for the input {}", function(){
+    assert(lib.sumOfPrimes({}) == "Invalid Input");
+
+  });
+  it("should return 'Invalid Input' for array input", function(){
+    assert(lib.sumOfPrimes([4,5]) == "Invalid Input");
+
+  });
+  it("should return 'Invalid Input' for the input -5", function(){
+    assert(lib.sumOfPrimes(-5) == 'Invalid Input');
+
+  });
+  it("should return 'Invalid Input' for string input", function(){
+    assert(lib.sumOfPrimes('') == 'Invalid Input');
+
+  });
+  it("should return 'Invalid Input' for the input 0", function(){
+    assert(lib.sumOfPrimes(0) == 'Invalid Input');
+
+  });
+  it("should return 'Invalid Input' for the input 1", function(){
+    assert(lib.sumOfPrimes(1) == 'Invalid Input');
+
   });
 });
+
